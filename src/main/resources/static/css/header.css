@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+}
+
+.headline {
+    width: 100%;
+    height: 250px;
+    background-image: url("../image/green.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+    margin-bottom: 20px;
+}
+
+.title {
+    margin: 0;
+    color: white;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #343a40; /* 어두운 배경 */
+    color: #ffffff; /* 흰색 텍스트 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* 사이드바 그림자 */
+    position: fixed; /* 사이드바를 왼쪽에 고정 */
+    top: 0;
+    left: 0;
+    height: 100%; /* 페이지 전체 높이 차지 */
+    z-index: 1; /* 다른 콘텐츠 위에 표시되도록 */
+}
+
+.status {
+    width: 100%;
+    text-align: center;
+}
+
+.status img {
+    width: 120px; /* 이미지 크기 */
+    height: 120px;
+    border-radius: 50%; /* 둥근 이미지 */
+    margin-bottom: 15px;
+    border: 3px solid #fff; /* 흰색 테두리 */
+}
+
+.username {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffc107; /* 노란색 텍스트 */
+}
+
+.status-message {
+    font-size: 1em;
+    color: #adb5bd; /* 연한 회색 텍스트 */
+    background-color: #495057; /* 다크 그레이 배경 */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.status-link {
+    display: block;
+    font-size: 1.2em;
+    color: #ffc107;
+    text-align: center;
+    text-decoration: none;
+    background-color: #495057;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.status-link:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.post-list {
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

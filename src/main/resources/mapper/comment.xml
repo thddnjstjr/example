@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.repository.interfaces.CommentRepository">
+
+	<insert id="insert">
+		insert into comment(post_id, content, author_id,created_at)
+		values(#{postId}, #{content}, #{authorId}, now())
+	</insert>
+
+	<update id="updateById">
+		update comment set content = #{content} where id = #{id}
+	</update>
+	
+	<delete id="deleteById">
+		delete from comment where id = #{id}
+	</delete>
+	
+	<select id="selectByPostId" resultType="com.example.demo.dto.Comment">
+		select * from comment where post_id = #{id}
+	</select>
+	
+</mapper>
